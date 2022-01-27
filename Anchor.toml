@@ -1,11 +1,11 @@
-[programs.localnet]
+[programs.devnet]
 music_portal_contracts = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "/home/antoine/.config/solana/id.json"
 
 [scripts]
