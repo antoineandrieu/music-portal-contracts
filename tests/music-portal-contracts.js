@@ -8,7 +8,7 @@ describe('music-portal-contracts', () => {
   const provider = anchor.Provider.env();
   anchor.setProvider(provider);
 
-  it('Is initialized!', async () => {
+  it('Is working!', async () => {
     // Add your test here.
     const program = anchor.workspace.MusicPortalContracts;
 
@@ -27,23 +27,23 @@ describe('music-portal-contracts', () => {
 
     console.log('Your transaction signature', tx);
 
-    // Fetch data from the account.
-    let account = await program.account.baseAccount.fetch(
-      baseAccount.publicKey
-    );
-    console.log('👀 Song Count', account.totalSongs.toString());
+    // // Fetch data from the account.
+    // let account = await program.account.baseAccount.fetch(
+    //   baseAccount.publicKey
+    // );
+    // console.log('👀 Song Count', account.totalSongs.toString());
 
-    await program.rpc.addSong(
-      '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/697HW34FLNURvRAbSieICv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-      {
-        accounts: {
-          baseAccount: baseAccount.publicKey,
-          user: provider.wallet.publicKey,
-        },
-      }
-    );
-    account = await program.account.baseAccount.fetch(baseAccount.publicKey);
-    console.log('👀 Song Count', account.totalSongs.toString());
-    console.log('👀 Song List', account.songList);
+    // await program.rpc.addSong(
+    //   '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/697HW34FLNURvRAbSieICv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    //   {
+    //     accounts: {
+    //       baseAccount: baseAccount.publicKey,
+    //       user: provider.wallet.publicKey,
+    //     },
+    //   }
+    // );
+    // account = await program.account.baseAccount.fetch(baseAccount.publicKey);
+    // console.log('👀 Song Count', account.totalSongs.toString());
+    // console.log('👀 Song List', account.songList);
   });
 });

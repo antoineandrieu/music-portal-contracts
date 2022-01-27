@@ -1,5 +1,5 @@
 [programs.devnet]
-music_portal_contracts = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+music_portal_contracts = "9wqcUtiFxUnuqYbAbBCp9XJjAvJWYzdZsPLiup4r56AJ"
 
 [registry]
 url = "https://anchor.projectserum.com"
